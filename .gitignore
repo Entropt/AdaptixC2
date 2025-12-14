@@ -29,3 +29,7 @@ AdaptixClient/Libs/kddockwidgets/*_export.h
 # macOS
 .DS_Store
 **/.DS_Store
+
+# Windows client
+build/
+.qtcreator/

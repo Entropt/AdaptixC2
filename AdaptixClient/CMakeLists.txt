@@ -155,6 +155,11 @@ SET( HEADERS
         Headers/Utils/TitleBarStyle.h
 )
 
+# Windows-specific resource file for application icon
+if(WIN32)
+    set(APP_ICON_RESOURCE Resources/app.rc)
+endif()
+
 add_executable(AdaptixClient
         ${KONSOLE_SOURCES}
         ${KONSOLE_HEADERS}
@@ -166,6 +171,8 @@ add_executable(AdaptixClient
         Source/main.cpp
 
         Resources/Resources.qrc
+
+        ${APP_ICON_RESOURCE}
 
         Source/Utils/Logs.cpp
         Source/UI/Dialogs/DialogConnect.cpp
